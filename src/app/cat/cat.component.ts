@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { FakeDataService } from '../fake-data.service';
 
 @Component({
   selector: 'app-cat',
@@ -9,8 +8,8 @@ import { FakeDataService } from '../fake-data.service';
 })
 export class CatComponent implements OnInit {
   catForm = new FormGroup({
-    foo: new FormControl('foo'),
-    bar: new FormControl('bar'),
+    fooX: new FormControl(''),
+    barX: new FormControl('barbarBAR'),
   });
 
   constructor() {}
