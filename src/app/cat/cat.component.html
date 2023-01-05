@@ -1,0 +1,13 @@
+<h1>cat</h1>
+
+<form [formGroup]="catForm" (ngSubmit)="catFormSubmitHandle()">
+  <div>
+    <label for="foo">foo</label>
+    <input id="foo" type="text" formControlName="foo"/>
+  </div>
+  <div>
+    <label for="bar">bar</label>
+    <input id="bar" type="text" formControlName="bar" />
+  </div>
+  <button type="submit">submit</button>
+</form>

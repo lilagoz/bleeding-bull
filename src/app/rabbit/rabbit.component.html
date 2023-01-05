@@ -1,0 +1,17 @@
+<h1>rabbit</h1>
+
+<form [formGroup]="rabbitForm" (ngSubmit)="rabbitFormSubmitHandle()">
+  <app-text-input label="The Foo" formControlName="foo"></app-text-input>
+  <p class="error" *ngIf="!rabbitForm.controls.foo.valid">error: {{this.rabbitForm.controls.foo.errors | json}}</p>
+
+  <app-text-input label="The Bar" formControlName="bar"></app-text-input>
+  <p class="error" *ngIf="!rabbitForm.controls.bar.valid">error: {{this.rabbitForm.controls.bar.errors | json}}</p>
+
+  <app-text-input label="The Baz" formControlName="baz"></app-text-input>
+  <p class="error" *ngIf="!rabbitForm.controls.baz.valid">error: {{this.rabbitForm.controls.baz.errors | json}}</p>
+
+  <app-text-input-ex label="The Quz"></app-text-input-ex>
+
+  <button type="submit">submit</button>
+</form>
+<div>valid: {{rabbitForm.valid}}</div>

@@ -1,0 +1,26 @@
+<h1>dog</h1>
+
+<form [formGroup]="dogForm" (ngSubmit)="dogFormSubmitHandle()">
+  <div>
+    <label for="foo">foo</label>
+    <input id="foo" type="text" formControlName="foo"/>
+    <p class="error" *ngIf="!dogForm.controls.foo.valid">error: {{this.dogForm.controls.foo.errors | json}}</p>
+  </div>
+  <div>
+    <label for="bar">bar*</label>
+    <input id="bar" type="text" formControlName="bar" required />
+    <p class="error" *ngIf="!dogForm.controls.bar.valid">error: {{this.dogForm.controls.bar.errors | json}}</p>
+
+  </div>
+  <div>
+    <label for="baz">baz*</label>
+    <input id="baz" type="text" formControlName="baz" />
+    <p class="error" *ngIf="!dogForm.controls.baz.valid">error: {{this.dogForm.controls.baz.errors | json}}</p>
+  </div>
+
+
+
+
+  <button type="submit">submit</button>
+</form>
+<div>valid: {{dogForm.valid}}</div>
