@@ -12,10 +12,9 @@ export class RabbitComponent implements OnInit {
 
   // this form group was created by form builder
   rabbitForm = this.fb.group({
-    foo: 'foo3',
-    bar: ['bar3'], // there is no required validator BUT
-    baz: ['baz3', [Validators.required]], // there is required
-    quz: ['quz3', [Validators.required]], // there is required
+    foo: '',
+    bar: [''], // there is no required validator BUT
+    baz: ['', [Validators.required]], // there is required
   });
   rabbitFormSubmitHandle() {
     console.warn(this.rabbitForm.errors);

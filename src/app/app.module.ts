@@ -10,7 +10,6 @@ import { CatComponent } from './cat/cat.component';
 import { DogComponent } from './dog/dog.component';
 import { RabbitComponent } from './rabbit/rabbit.component';
 import { TextInputComponent } from './text-input/text-input.component';
-import { TextInputExComponent } from './text-input-ex/text-input-ex.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { TextInputExComponent } from './text-input-ex/text-input-ex.component';
     DogComponent,
     RabbitComponent,
     TextInputComponent,
-    TextInputExComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],

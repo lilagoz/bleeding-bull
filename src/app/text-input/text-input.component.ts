@@ -1,11 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {
-  AbstractControl,
   ControlValueAccessor,
-  NG_VALIDATORS,
+  FormControl,
   NG_VALUE_ACCESSOR,
-  ValidationErrors,
-  Validator,
 } from '@angular/forms';
 
 @Component({
@@ -22,6 +19,7 @@ import {
 })
 export class TextInputComponent implements OnInit, ControlValueAccessor {
   @Input() label: string = '';
+  @Input() formControl: FormControl | null = null;
 
   value: string = '';
   onChange = (value: string) => {};
@@ -29,9 +27,6 @@ export class TextInputComponent implements OnInit, ControlValueAccessor {
   get id() {
     return `${this.label}-TextInputComponent`;
   }
-
-  valid: boolean = true;
-  errors: ValidationErrors | null = null;
 
   registerOnChange(fn: any): void {
     this.onChange = fn;
