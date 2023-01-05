@@ -1,5 +1,5 @@
 <div>
   <label [for]="id">{{label}}</label>
   <input [id]="id" type="text" [(ngModel)]="value" (ngModelChange)="changeHandle()" />
-  <p class="error" *ngIf="this.formControl && !this.formControl?.valid">Validation error: {{this.formControl?.errors | json}}</p>
+  <p class="error" *ngIf="this?.formControl && !this.formControl?.valid">Validation error: {{this.formControl?.errors | json}}</p>
 </div>
