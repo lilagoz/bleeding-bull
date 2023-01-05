@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SnailComponent {
   data = {
-    foo: '',
-    bar: '',
+    foo: 'apple',
+    bar: 'banana',
   };
   snailFormSubmitHandle() {
     console.log('sendData', this.data);
