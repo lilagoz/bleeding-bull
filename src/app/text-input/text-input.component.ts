@@ -45,7 +45,6 @@ export class TextInputComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {}
 
   changeHandle() {
-    console.log(this.value);
     this.onChange(this.value);
   }
 }

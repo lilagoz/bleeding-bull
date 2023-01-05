@@ -40,7 +40,9 @@ export class RabbitComponent implements OnInit {
     { validators: [this.somewhereACat] }
   );
   rabbitFormSubmitHandle() {
-    console.warn(this.rabbitForm.errors);
-    console.info(this.rabbitForm.value);
+    if (this.rabbitForm.valid) {
+      console.warn(this.rabbitForm.errors);
+      console.info(this.rabbitForm.value);
+    }
   }
 }

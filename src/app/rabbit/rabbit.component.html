@@ -1,9 +1,9 @@
 <h1>rabbit</h1>
 
 <form [formGroup]="rabbitForm" (ngSubmit)="rabbitFormSubmitHandle()">
-  <app-text-input label="The Foo" formControlName="foo" [formControl]="this.rabbitForm.controls.foo"></app-text-input>
-  <app-text-input label="The Bar*" formControlName="bar" [formControl]="this.rabbitForm.controls.bar" required></app-text-input>
-  <app-text-input label="The Baz*" formControlName="baz" [formControl]="this.rabbitForm.controls.baz" ></app-text-input>
+  <app-text-input label="The Foo" formControlName="foo" [formControl]="rabbitForm.controls.foo"></app-text-input>
+  <app-text-input label="The Bar*" formControlName="bar" [formControl]="rabbitForm.controls.bar" required></app-text-input>
+  <app-text-input label="The Baz*" formControlName="baz" [formControl]="rabbitForm.controls.baz" ></app-text-input>
 
   <button type="submit">submit</button>
 </form>
