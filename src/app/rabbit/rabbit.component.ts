@@ -16,7 +16,6 @@ export class RabbitComponent implements OnInit {
   ngOnInit() {}
 
   onlyTheGoat(control: AbstractControl): ValidationErrors | null {
-    console.log('onlyTheGoat', control);
     return control.value === 'goat' ? null : { onlyTheGoat: true };
   }
 
