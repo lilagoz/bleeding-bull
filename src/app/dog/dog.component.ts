@@ -12,8 +12,8 @@ export class DogComponent implements OnInit {
 
   // this form group was created by form builder
   dogForm = this.fb.group({
-    foo: 'foo2',
-    bar: [''], // there is no required validator BUT
+    foo: 'foo23',
+    bar: ['ez itt '], // there is no required validator BUT
     baz: ['', [Validators.required]], // there is required
   });
   dogFormSubmitHandle() {
