@@ -1,0 +1,15 @@
+<h1>snail</h1>
+
+<form (ngSubmit)="snailFormSubmitHandle()">
+  <div>
+    <label for="foo">foo</label>
+    <input id="foo" name="foo" type="text" [(ngModel)]="data.foo"/>
+  </div>
+  <div>
+    <label for="bar">bar</label>
+    <input id="bar" name="bar" type="text"  [(ngModel)]="data.bar" />
+  </div>
+  <button type="submit">submit</button>
+</form>
+
+<p>{{data | json}}</p>

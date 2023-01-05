@@ -10,6 +10,7 @@ import { CatComponent } from './cat/cat.component';
 import { DogComponent } from './dog/dog.component';
 import { RabbitComponent } from './rabbit/rabbit.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { SnailComponent } from './snail/snail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TextInputComponent } from './text-input/text-input.component';
     DogComponent,
     RabbitComponent,
     TextInputComponent,
+    SnailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],
