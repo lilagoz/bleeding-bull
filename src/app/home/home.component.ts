@@ -18,6 +18,7 @@ export interface MyInterface {
 
 export function isMyInterface(object: any): object is MyInterface {
   const myInterface = object as MyInterface;
+
   return myInterface.getName !== undefined;
 }
 
