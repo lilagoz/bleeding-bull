@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FakeDataService } from '../fake-data.service';
+import { Observable } from 'rxjs';
 
 interface Animal {
   feed(): void;
@@ -28,12 +30,15 @@ export function isMyInterface(object: any): object is MyInterface {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  data$: Observable<any> | undefined;
   buksi = new Puppy();
-  constructor() {}
+  constructor(private fake: FakeDataService) {}
 
   ngOnInit(): void {
     if (this.buksi.isAnimal()) {
       this.buksi.feed();
     } else console.error(`wau`);
+
+    this.data$ = this.fake.getFooBar$();
   }
 }

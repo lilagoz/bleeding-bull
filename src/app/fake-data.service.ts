@@ -27,8 +27,6 @@ export class FakeDataService {
   };*/
   public getFooBar$ = () => {
     // return of(this.getFoo$(), this.getBar$()).pipe(zipAll());
-    return concat(this.getFoo$(), this.getBar$())
-      .pipe(zipAll())
-      .pipe(toArray());
+    return of(this.getFoo$(), this.getBar$()).pipe(zipAll()).pipe(toArray());
   };
 }
