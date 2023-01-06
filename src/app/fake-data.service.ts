@@ -25,6 +25,7 @@ export class FakeDataService {
       map((value, index) => value.map(value2 => `x${value2}`))
     );
   };*/
+
   public getFooBar$ = () => {
     // return of(this.getFoo$(), this.getBar$()).pipe(zipAll());
     return of(this.getFoo$(), this.getBar$()).pipe(zipAll()).pipe(toArray());
