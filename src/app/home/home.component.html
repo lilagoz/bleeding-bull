@@ -1,5 +1,11 @@
 <h1>there is no place like 127.0.0.1</h1>
 
 <div>
-  {{data$|async|json}}
+  data: {{data$|async|json}}
+</div>
+<div>
+  location: {{location$ | async | json}}
+</div>
+<div>
+  coords: {{coords | json}}
 </div>
