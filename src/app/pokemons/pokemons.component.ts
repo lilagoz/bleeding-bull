@@ -18,4 +18,8 @@ export class PokemonsComponent implements OnInit {
   handleNext() {
     this.ps.nextPokemons();
   }
+
+  onWindowScroll(event: any) {
+    console.log(event);
+  }
 }
