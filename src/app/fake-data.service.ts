@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import {
   concat,
+  interval,
   map,
   merge,
   mergeAll,
   Observable,
   of,
+  scan,
   toArray,
   zipAll,
 } from 'rxjs';
@@ -77,4 +79,9 @@ export class FakeDataService {
       },
     };
   });
+
+  tick$ = interval(1000);
+  allTick$ = this.tick$.pipe(
+    scan<number, number[]>((acc, value) => [...acc, value], [])
+  );
 }

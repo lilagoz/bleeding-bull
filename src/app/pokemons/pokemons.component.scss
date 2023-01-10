@@ -1,0 +1,22 @@
+.pokeContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.pokeCard {
+  width: 7rem;
+  padding: 2rem 0.5rem;
+  margin: 0.5rem;
+  border: 1px solid orange;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 0.5rem #8888;
+  transition: all 500ms;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid darkred;
+    box-shadow: 0 0 1rem #8888;
+    transition: all 500ms;
+  }
+}

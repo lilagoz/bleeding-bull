@@ -35,6 +35,8 @@ export class HomeComponent implements OnInit {
   coords: GeolocationCoordinates | undefined;
   buksi = new Puppy();
   constructor(private fake: FakeDataService) {}
+  counter$ = this.fake.tick$;
+  allCounters = this.fake.allTick$;
 
   ngOnInit(): void {
     if (this.buksi.isAnimal()) {
