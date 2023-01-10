@@ -45,25 +45,7 @@ export class HomeComponent implements OnInit {
 
     this.location$ = this.fake.locations$;
     this.location$.subscribe(loc => {
-      const {
-        latitude,
-        longitude,
-        altitude,
-        altitudeAccuracy,
-        accuracy,
-        speed,
-        heading,
-      } = loc.coords;
-      this.coords = {
-        latitude,
-        longitude,
-        altitude,
-        altitudeAccuracy,
-        accuracy,
-        speed,
-        heading,
-      };
-      console.log('coord', loc);
+      console.log('coordination', loc);
     });
   }
 }

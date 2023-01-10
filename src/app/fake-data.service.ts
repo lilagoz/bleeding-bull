@@ -40,7 +40,27 @@ export class FakeDataService {
     if ('geolocation' in navigator) {
       watchId = navigator.geolocation.watchPosition(
         (position: GeolocationPosition) => {
-          observer.next(position);
+          const {
+            latitude,
+            longitude,
+            altitude,
+            altitudeAccuracy,
+            accuracy,
+            speed,
+            heading,
+          } = position.coords;
+          observer.next({
+            timestamp: position.timestamp,
+            coords: {
+              latitude,
+              longitude,
+              altitude,
+              altitudeAccuracy,
+              accuracy,
+              speed,
+              heading,
+            },
+          });
         },
         (error: GeolocationPositionError) => {
           observer.error(error);
