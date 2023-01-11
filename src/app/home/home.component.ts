@@ -31,8 +31,12 @@ export function isMyInterface(object: any): object is MyInterface {
 })
 export class HomeComponent implements OnInit {
   data$: Observable<any> | undefined;
+  location$: Observable<GeolocationPosition> | undefined;
+  coords: GeolocationCoordinates | undefined;
   buksi = new Puppy();
   constructor(private fake: FakeDataService) {}
+  counter$ = this.fake.tick$;
+  allCounters = this.fake.allTick$;
 
   ngOnInit(): void {
     if (this.buksi.isAnimal()) {
@@ -40,5 +44,10 @@ export class HomeComponent implements OnInit {
     } else console.error(`wau`);
 
     this.data$ = this.fake.getFooBar$();
+
+    this.location$ = this.fake.locations$;
+    this.location$.subscribe(loc => {
+      console.log('coordination', loc);
+    });
   }
 }

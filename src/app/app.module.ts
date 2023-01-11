@@ -11,6 +11,7 @@ import { DogComponent } from './dog/dog.component';
 import { RabbitComponent } from './rabbit/rabbit.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { SnailComponent } from './snail/snail.component';
+import { PokemonsComponent } from './pokemons/pokemons.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SnailComponent } from './snail/snail.component';
     RabbitComponent,
     TextInputComponent,
     SnailComponent,
+    PokemonsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],
