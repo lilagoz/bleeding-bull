@@ -2,5 +2,5 @@
 <div class="pokeContainer" (window:scroll)="onWindowScroll($event)">
   <div class="pokeCard" *ngFor="let item of (pokemons$ | async)">{{item.name}}</div>
 </div>
-<button (click)="handleNext()" >next...</button>
+<button #nextButton (click)="handleNext()" >next...</button>
 <pre *ngIf="false">{{pokemons$ | async | json}}</pre>

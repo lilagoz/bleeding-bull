@@ -4,17 +4,7 @@ import {
   NamedAPIResource,
   NamedAPIResourceList,
 } from 'pokenode-ts';
-import {
-  from,
-  map,
-  Observable,
-  of,
-  scan,
-  Subscriber,
-  toArray,
-  zip,
-  zipAll,
-} from 'rxjs';
+import { map, Observable, scan, Subscriber } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -32,10 +22,12 @@ export class PokemonService {
   });
 
   nextPokemons() {
-    this.client.pokemon.listPokemons(this.offset, this.limit).then(result => {
-      this.offset += this.limit;
-      this.pokemonsSubscriber?.next(result);
-    });
+    this.client.pokemon
+      .listPokemons(this.offset, this.offset ? this.limit : 40)
+      .then(result => {
+        this.offset += this.limit;
+        this.pokemonsSubscriber?.next(result);
+      });
   }
 
   private mapPokemonList(value: NamedAPIResourceList) {
